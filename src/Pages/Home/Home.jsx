@@ -7,9 +7,9 @@ const Home = () => {
             <div className="">
             <Navbar></Navbar>
             </div>
-            <div className="flex font-bold text-white h-[60vh] items-center justify-center">
+            <div className="flex font-bold text-center text-white h-[60vh] items-center justify-center">
 
-            <h2 className="text-4xl">Discover the real value of travel</h2>
+            <h2 className="text-3xl md:text-4xl">Discover the real value of travel</h2>
             </div>
             </div>
         </div>

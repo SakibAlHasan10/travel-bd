@@ -26,11 +26,11 @@ const Navbar = () => {
   );
   window.addEventListener("scroll", changeNavColor);
   return (
-    <div className={`${colorChange ? "bg-white" : "bg-none"} fixed xl:px-[6.8rem] navbar py-0`}>
+    <div className={`${colorChange ? "bg-white" : "bg-none"} md:fixed xl:px-[6.8rem] md:navbar py-0`}>
       <div
-        className={`  navbar  top-0 max-w-6xl px-8 `}
+        className={`  md:navbar  top-0 max-w-6xl px-8 `}
       >
-        <div className={`w-1/2 ${colorChange ? "text-black" : "text-white"}`}>
+        <div className={` w-full md:w-1/2 ${colorChange ? "text-black" : "text-white"}`}>
           <div className="">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -51,14 +51,17 @@ const Navbar = () => {
               </label>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                className="menu menu-sm text-black dropdown-content -mt-2 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
                 {nav}
               </ul>
             </div>
-            <a className="btn btn-ghost normal-case  font-bold text-2xl">
+            <div className="btn  btn-ghost  normal-case  font-bold text-2xl">
+
+            <a >
               Travel BD
             </a>
+            </div>
           </div>
 
           <div className=" hidden lg:flex">
@@ -68,7 +71,7 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-        <div className="w-1/2 navbar-end gap-2">
+        <div className=" w-full md:w-1/2 flex justify-center md:justify-end navbar-end gap-2">
           <div className="  flex ">
             <div className={`flex rounded-l-xl ${colorChange ? "bg-white text-black hover:bg-[#f6f5f5]  border border-slate-500" : "bg-[#00000071] text-white hover:bg-[#0000009e] border-none"}`}>
 
