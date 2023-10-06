@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import NavButton from "../../Sheare/NavButton";
 const Navbar = () => {
   const [colorChange, setColorChange] = useState(false);
   const changeNavColor = () => {
@@ -25,11 +26,11 @@ const Navbar = () => {
   );
   window.addEventListener("scroll", changeNavColor);
   return (
-    <div className={`${colorChange ? "bg-white" : "bg-none"} fixed xl:px-[6.8rem] navbar`}>
+    <div className={`${colorChange ? "bg-white" : "bg-none"} fixed xl:px-[6.8rem] navbar py-0`}>
       <div
         className={`  navbar  top-0 max-w-6xl px-8 `}
       >
-        <div className="w-1/2 ">
+        <div className={`w-1/2 ${colorChange ? "text-black" : "text-white"}`}>
           <div className="">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -55,55 +56,39 @@ const Navbar = () => {
                 {nav}
               </ul>
             </div>
-            <a className="btn btn-ghost normal-case text-white font-bold text-2xl">
+            <a className="btn btn-ghost normal-case  font-bold text-2xl">
               Travel BD
             </a>
           </div>
 
           <div className=" hidden lg:flex">
-            <ul className="menu menu-horizontal text-white text-lg font-semibold px-1">
+            <ul className="menu menu-horizontal text-lg font-semibold px-1">
               
               {nav}
             </ul>
           </div>
         </div>
         <div className="w-1/2 navbar-end gap-2">
-          <div className=" gap-1 flex ">
-            <div className="flex">
-              <button className="text-lg rounded-l-xl w-24  text-white btn-sm bg-[#00000071] hover:bg-[#0000009e] flex items-center gap-3 border-none">
-                BD
-                <img
-                  src="/down-arrow-7425.png"
-                  alt="arrow"
-                  className=" pr-2 w-8 h-4 pt-1 "
-                />
-              </button>
+          <div className="  flex ">
+            <div className={`flex rounded-l-xl ${colorChange ? "bg-white text-black hover:bg-[#f6f5f5]  border border-slate-500" : "bg-[#00000071] text-white hover:bg-[#0000009e] border-none"}`}>
+
+              <NavButton colorChange={colorChange}>en</NavButton>
             </div>
-            <button className="text-lg w-20 text-white btn-sm bg-[#00000071] hover:bg-[#0000009e] flex items-center gap-3 border-none">
-              EN
-              <img
-                src="/down-arrow-7425.png"
-                alt="arrow"
-                className="  w-8 h-4 pt-1 "
-              />
-            </button>
-            <button className="text-lg rounded-r-xl w-24 text-white btn-sm bg-[#00000071] hover:bg-[#0000009e] flex items-center gap-3 border-none">
-              BDT
-              <img
-                src="/down-arrow-7425.png"
-                alt="arrow"
-                className=" pr-2 w-8 h-4 pt-1 "
-              />
-            </button>
+            <div className={`flex ${colorChange ? "bg-white hover:bg-[#f6f5f5] text-black  border-y border-slate-500" : "bg-[#00000071] text-white hover:bg-[#0000009e] border-x border-[#ffffff38]"}`}>
+
+              <NavButton colorChange={colorChange}>en</NavButton>
+            </div> 
+            <div className={`flex rounded-r-xl ${colorChange ? "bg-white hover:bg-[#f6f5f5] text-black  border border-slate-500" : "bg-[#00000071] text-white hover:bg-[#0000009e] border-none"}`}>
+
+              <NavButton colorChange={colorChange}>en</NavButton>
+            </div>
           </div>
           <div className="dropdown dropdown-end">
-            {/* <label tabIndex={0} className="btn btn-ghost  "> */}
             <div className="">
-              <button className="btn rounded-xl btn-sm bg-[#00000071] hover:bg-[#0000009e] text-white border-none">
+              <button className={`btn capitalize rounded-xl btn-sm ${colorChange ? "bg-white text-black  border border-slate-500" : "bg-[#00000071] text-white hover:bg-[#0000009e] border-none"}`}>
                 Login
               </button>
             </div>
-            {/* </label> */}
             <ul
               tabIndex={0}
               className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
