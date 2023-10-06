@@ -12,7 +12,7 @@ const Home = () => {
             <div className="">
             <Navbar></Navbar>
             </div>
-            <div className="flex font-bold text-center text-white h-[60vh] items-center justify-center">
+            <div className="flex font-bold text-center text-white h-[35vh] mb-[16vh] items-end justify-center">
 
             <h2 className="text-3xl md:text-4xl">Discover the real value of travel</h2>
             </div>
