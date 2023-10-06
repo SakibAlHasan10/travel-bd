@@ -2,6 +2,7 @@ import Login from "../../Components/Login/Login";
 import Navbar from "../../Components/Navbar/Navbar";
 import Modal from "react-modal";
 import SearchButton from "../../Sheare/SearchButton/SearchButton";
+import { Outlet } from "react-router-dom";
 
 Modal.setAppElement('#root')
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
             </div>
             <Login></Login>
             <SearchButton></SearchButton>
+            <Outlet></Outlet>
             </div>
         </div>
     );
