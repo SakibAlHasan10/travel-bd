@@ -7,9 +7,9 @@ const Navbar = () => {
     <li><Link>Travel Blog</Link></li>
     </>
   return (
-    <div className="  fixed top-0 max-w-screen-xl">
-      <div className=" navbar w-full ">
-        <div className="flex-1 ">
+    <div className="  navbar fixed xl:mx-24 top-0 max-w-6xl px-8  ">
+      <div className=" navbar">
+        <div className="w-1/2 ">
           <div className="">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -82,7 +82,7 @@ const Navbar = () => {
           </ul>
         </div>
         </div>
-        <div className="flex-1 gap-2">
+        <div className="w-1/2 navbar-end gap-2">
           <div className=" gap-1 flex ">
             <div className="flex">
               <button className="text-lg rounded-l-xl w-24 text-white btn-sm bg-[#00000071] hover:bg-[#0000009e] flex items-center gap-3 border-none">
