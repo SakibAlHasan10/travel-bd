@@ -7,8 +7,8 @@ const Hotels = () => {
     // console.log(location.pathname)
     handlePathName(location.pathname)
     return (
-        <div>
-            hottle
+        <div className="max-w-6xl px-8 mx-auto bg-white h-52 shadow-xl rounded-tr-xl rounded-b-xl">
+            Hotels
         </div>
     );
 };

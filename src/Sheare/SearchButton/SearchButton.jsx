@@ -6,7 +6,7 @@ const SearchButton = () => {
   const { pathName } = useApi();
 
   return (
-    <div className="max-w-6xl px-8 mx-auto flex items-center">
+    <div className="max-w-6xl mx-auto flex items-center">
       <NavLink
         to={`/flights`}
         className={({ isActive }) =>
