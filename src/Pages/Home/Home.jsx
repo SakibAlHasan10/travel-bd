@@ -1,6 +1,7 @@
 import Login from "../../Components/Login/Login";
 import Navbar from "../../Components/Navbar/Navbar";
 import Modal from "react-modal";
+import SearchButton from "../../Sheare/SearchButton/SearchButton";
 
 Modal.setAppElement('#root')
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
             <h2 className="text-3xl md:text-4xl">Discover the real value of travel</h2>
             </div>
             <Login></Login>
+            <SearchButton></SearchButton>
             </div>
         </div>
     );
