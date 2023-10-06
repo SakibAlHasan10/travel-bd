@@ -23,7 +23,14 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        <Link>Hotels</Link>
+      <NavLink
+          to={`/hotels`}
+          className={({ isActive, isPending }) =>
+            isActive ? "active" : isPending ? "pending" : ""
+          }
+        >
+          Hotels
+        </NavLink>
       </li>
       <li>
         <Link>Travel Blog</Link>
